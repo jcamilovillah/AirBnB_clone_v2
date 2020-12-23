@@ -24,7 +24,7 @@ def do_pack():
     new_file = local(
         "tar -cvzf versions/web_static_{}.tgz web_static".format(format_time))
     if new_file.succeeded:
-        return "versions/web_static_{}.tgz web_static".format(format_time)
+        return "versions/web_static_{}.tgz".format(format_time)
     else:
         return None
 
