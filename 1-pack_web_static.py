@@ -2,7 +2,7 @@
 # Fabric script that generates a .tgz archive
 """ Pack web static """
 from fabric.api import local
-import datetime import datetime
+from datetime import datetime
 
 
 def do_pack():
