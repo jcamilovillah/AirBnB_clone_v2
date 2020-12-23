@@ -11,7 +11,7 @@ env.hosts = ["35.185.12.242", "35.229.37.224"]
 def deploy():
     """Creates and distributes an archive to your web servers"""
     route = do_pack()
-    if route == False:
+    if route is False:
         return False
     val = do_deploy(route)
     return val
