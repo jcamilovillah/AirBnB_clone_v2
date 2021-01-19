@@ -42,7 +42,7 @@ class DBStorage:
                 name_cl = type(obj).__name__ + "." + str(obj.id)
                 objs[name_cl] = obj
         else:
-            consulta1 = self.__session.query(cls).all() # bye eval()
+            consulta1 = self.__session.query(cls).all()
             for obj in consulta1:
                 name_cl = type(obj).__name__ + "." + str(obj.id)
                 objs[name_cl] = obj
