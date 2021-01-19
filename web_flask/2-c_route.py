@@ -24,4 +24,5 @@ def cisfun(text):
     space = text.replace("_", " ")
     return 'C {}'.format(space)
 
-app.run(host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
