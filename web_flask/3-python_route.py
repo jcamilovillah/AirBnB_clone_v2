@@ -24,6 +24,7 @@ def cisFun(text):
     space = text.replace("_", " ")
     return 'C {}'.format(space)
 
+
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def pythonisFun(text="is cool"):
