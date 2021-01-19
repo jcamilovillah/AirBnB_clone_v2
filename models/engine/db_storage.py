@@ -42,7 +42,7 @@ class DBStorage:
                 name_cl = type(obj).__name__ + "." + str(obj.id)
                 objs[name_cl] = obj
         else:
-            consulta1 = self.__session.query(eval(cls)).all()
+            consulta1 = self.__session.query(cls).all() # bye eval()
             for obj in consulta1:
                 name_cl = type(obj).__name__ + "." + str(obj.id)
                 objs[name_cl] = obj
@@ -69,3 +69,7 @@ class DBStorage:
         s_factory = sessionmaker(bind=self.__engine, expire_on_commit=False)
         Session = scoped_session(s_factory)
         self.__session = Session()
+
+    def close(self):
+        """ call remove() method on the private session attribute"""
+        self.__session.close()
