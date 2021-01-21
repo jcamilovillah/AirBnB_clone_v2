@@ -24,7 +24,8 @@ def copyHTML():
     """display a HTML page like 6-index.html"""
     state = storage.all(State)
     amenities = storage.all(Amenity)
-    return render_template('10-hbnb_filters.html', states=state, amenities=amenities)
+    return render_template('10-hbnb_filters.html', states=state,
+                           amenities=amenities)
 
 
 if __name__ == "__main__":
